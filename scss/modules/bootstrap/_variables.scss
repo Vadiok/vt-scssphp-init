@@ -1,0 +1,54 @@
+// Переопределение значений Bootstrap переменных
+
+
+//== Components
+$padding-base-vertical:     6px;
+$padding-base-horizontal:   12px;
+
+$padding-large-vertical:    10px;
+$padding-large-horizontal:  16px;
+
+$padding-small-vertical:    5px;
+$padding-small-horizontal:  10px;
+
+$padding-xs-vertical:       1px;
+$padding-xs-horizontal:     5px;
+
+
+//== Media queries breakpoints
+$screen-xxs:                 320px;
+$screen-xxs-min:             $screen-xxs;
+$screen-xphone:              $screen-xxs-min;
+
+$screen-xs:                  480px;
+
+$screen-sm:                  768px;
+
+$screen-md:                  992px;
+
+$screen-lg:                  1200px;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xxs-max:             ($screen-xs - 1) !default;
+
+
+//== Grid system
+$grid-columns:              12;
+$grid-gutter-width:         30px; // Расстояние между колонками
+$grid-float-breakpoint:     $screen-sm; // 768px
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1);
+
+
+//== Container sizes
+// Макс. размер `.container`
+$container-phone:              (420px + $grid-gutter-width) !default;
+$container-xs:                 $container-phone !default;
+
+$container-tablet:             (720px + $grid-gutter-width) !default;
+$container-sm:                 $container-tablet !default;
+
+$container-desktop:            (940px + $grid-gutter-width) !default;
+$container-md:                 $container-desktop !default;
+
+$container-large-desktop:      (1140px + $grid-gutter-width) !default;
+$container-lg:                 $container-large-desktop !default;

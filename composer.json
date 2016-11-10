@@ -1,0 +1,15 @@
+{
+    "name": "vadiok/vt-scssphp-init",
+    "description": "Initial files for using SCSS preprocessor in PHP projects",
+    "type": "project",
+    "require": {
+        "leafo/scssphp": "*"
+    },
+    "license": "GNU GPL v2",
+    "authors": [
+        {
+            "name": "Vlad Tokarev",
+            "email": "vlad@tokarev.tk"
+        }
+    ]
+}

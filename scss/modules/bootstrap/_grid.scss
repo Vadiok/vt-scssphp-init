@@ -1,0 +1,119 @@
+//
+// Grid system
+// --------------------------------------------------
+
+// Generate the XXS columns
+@mixin make-xxs-column($columns, $gutter: $grid-gutter-width) {
+	position: relative;
+	float: left;
+	width: percentage(($columns / $grid-columns));
+	min-height: 1px;
+	padding-left:  ($gutter / 2);
+	padding-right: ($gutter / 2);
+}
+@mixin make-xxs-column-offset($columns) {
+	margin-left: percentage(($columns / $grid-columns));
+}
+@mixin make-xxs-column-push($columns) {
+	left: percentage(($columns / $grid-columns));
+}
+@mixin make-xxs-column-pull($columns) {
+	right: percentage(($columns / $grid-columns));
+}
+@mixin make-grid-columns($i: 1, $list: ".col-xxs-#{$i}, .col-xs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}") {
+	@for $i from (1 + 1) through $grid-columns {
+		$list: "#{$list}, .col-xxs-#{$i}, .col-xs-#{$i}, .col-xxs-#{$i}, .col-sm-#{$i}, .col-md-#{$i}, .col-lg-#{$i}";
+	}
+	#{$list} {
+		position: relative;
+		// Prevent columns from collapsing when empty
+		min-height: 1px;
+		// Inner gutter via padding
+		padding-left:  ceil(($grid-gutter-width / 2));
+		padding-right: floor(($grid-gutter-width / 2));
+	}
+}
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+	@include container-fixed;
+
+	@media (min-width: $screen-sm-min) {
+		width: $container-sm;
+	}
+	@media (min-width: $screen-md-min) {
+		width: $container-md;
+	}
+	@media (min-width: $screen-lg-min) {
+		width: $container-lg;
+	}
+}
+
+
+// Fluid container
+//
+// Utilizes the mixin meant for fixed width containers, but without any defined
+// width for fluid, full width layouts.
+
+.container-fluid {
+	@include container-fixed;
+}
+
+
+// Row
+//
+// Rows contain and clear the floats of your columns.
+
+.row {
+	@include make-row;
+}
+
+
+// Columns
+//
+// Common styles for small and large grid columns
+
+@include make-grid-columns;
+
+
+// XXS - добавлено к стандартному
+@include make-grid(xxs);
+
+
+// Extra small grid
+// Отредактировано - добавлено media условие
+@media (min-width: $screen-xs-min) {
+	@include make-grid(xs);
+}
+
+
+// Small grid
+//
+// Columns, offsets, pushes, and pulls for the small device range, from phones
+// to tablets.
+
+@media (min-width: $screen-sm-min) {
+	@include make-grid(sm);
+}
+
+
+// Medium grid
+//
+// Columns, offsets, pushes, and pulls for the desktop device range.
+
+@media (min-width: $screen-md-min) {
+	@include make-grid(md);
+}
+
+
+// Large grid
+//
+// Columns, offsets, pushes, and pulls for the large desktop device range.
+
+@media (min-width: $screen-lg-min) {
+	@include make-grid(lg);
+}

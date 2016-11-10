@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7",
+    "bourbon-neat": "^1.8.0"
+  }
+}

@@ -1,0 +1,14 @@
+.idea
+/**/cgi-bin
+
+/scss/scss_cache/
+/scss/**/*.css
+
+/vendor/**/bin/
+
+/node_modules
+/node_modules/**/node_modules/
+.yarn-integrity
+
+!/node_modules/bootstrap-sass/assets/
+!/node_modules/bourbon-neat/app/assets/
