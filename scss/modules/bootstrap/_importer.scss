@@ -88,4 +88,4 @@ $use_utilities: false !default;
 
 // Utility classes
 @if $use_utilities {@import $bootstrapModulesDir + "/utilities";}
-@if $use_utilities {@import $bootstrapModulesDir + "/responsive-utilities";}
+@if $use_utilities {@import "responsive-utilities";}
