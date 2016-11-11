@@ -24,3 +24,13 @@
 		}
 	}
 }
+
+@media (max-width: 767px) {
+	.bourbon-container {
+		.bourbon-column-left,
+		.bourbon-column-center,
+		.bourbon-column-right {
+			@include span-columns(1 of 1);
+		}
+	}
+}
