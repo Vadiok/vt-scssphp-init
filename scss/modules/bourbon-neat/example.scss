@@ -3,13 +3,13 @@
 .bourbon-container {
 	@include outer-container;
 	.bourbon-column-left {
-		@include span-columns(6 of 12);
+		@include span-columns(6);
 	}
 	.bourbon-column-center {
-		@include span-columns(4 of 12);
+		@include span-columns(4);
 	}
 	.bourbon-column-right {
-		@include span-columns(2 of 12);
+		@include span-columns(2);
 	}
 }
 
