@@ -1,0 +1,3 @@
+// Bootstrap лучше подключать отдельно на время разработки, т.к. он долго компилируется
+@import "../modules/bootstrap/bootstrap_full"; // Полный вариант
+//@import "../modules/bootstrap/bootstrap_grid"; // Только сетка

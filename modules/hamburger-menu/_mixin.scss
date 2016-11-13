@@ -1,0 +1,86 @@
+@mixin hamburgerMenuIcon(
+	$color: #000,
+	$width: 30px,
+	$lineWidth: 4px,
+	$lineMargin: $lineWidth,
+	$lineRadius: $lineWidth/2,
+	$innerMargin: 0,
+	$speed: 0.2s,
+	$boxShadow: none
+) {
+	$height: ($lineWidth * 3 + $lineMargin * 2);
+	line-height: $height;
+	cursor: pointer;
+	> .hmi-inner-container {
+		height: $height;
+		display: inline-block;
+		width: $width;
+		position: relative;
+		margin: $innerMargin;
+		> .hmi-inner {
+			transition-duration: $speed/2;
+			margin-top: ($lineWidth*1.5 + $lineMargin);
+			&, &:before, &::before,
+			&::after, &::after {
+				display: inline-block;
+				height: $lineWidth;
+				width: 100%;
+				background-color: $color;
+				border-radius: $lineRadius;
+				content: "";
+				position: absolute;
+				box-shadow: $boxShadow;
+			}
+			&:before, &::before,
+			&::after, &::after {
+				transition-duration: $speed;
+			}
+			&:before, &::before {
+				margin-top: -($lineWidth + $lineMargin);
+			}
+			&::after, &::after {
+				margin-top: ($lineWidth + $lineMargin);
+			}
+		}
+	}
+	&.hmi-is-open > .hmi-inner-container > .hmi-inner {
+		background-color: transparent;
+		box-shadow: none;
+		&:before, &::before {
+			transform: rotate(45deg);
+			margin-top: 0;
+		}
+		&::after, &::after {
+			transform: rotate(-45deg);
+			margin-top: 0;
+		}
+	}
+}
+
+@mixin hamburgerMenuTop(
+	$offset: 0,
+	$position: top,
+	$isFixed: true,
+	$speed: 0.2s
+) {
+	@if ($position == "bottom") {
+		bottom: $offset;
+	} @else {
+		top: $offset;
+	}
+	@if ($isFixed) {
+		position: fixed;
+	} @else {
+		position: absolute;
+	}
+	width: 100%;
+	left: -100%;
+	transition-duration: $speed;
+	height: 0;
+	opacity: 0;
+	&.menu-is-open {
+		height: auto;
+		left: 0;
+		opacity: 1;
+	}
+}

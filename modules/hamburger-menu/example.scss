@@ -1,0 +1,17 @@
+@import "mixin";
+
+.hamburger-menu-icon {
+	@include hamburgerMenuIcon($lineWidth: 4px, $lineMargin: 2px, $innerMargin: 0 5px, $width: 20px);
+	&:hover, &:focus {
+		text-decoration: none;
+	}
+}
+
+#mobile-menu-top {
+	@include hamburgerMenuTop();
+	background: #08f;
+	padding: 10px;
+	a {
+		color: #fff;
+	}
+}
