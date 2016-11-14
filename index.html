@@ -16,30 +16,30 @@
 			<h1>Пример страницы с использованием ScssPhp</h1>
 			<h3>Bootstrap с добавленым xxs</h3>
 			<p><code>col-xs-12</code> и подобные с <code>xs</code> действуют на разрешения от 767px до 480px, в оригинальном Bootstrap <code>xs</code> действовал при любом разрешении меньше 767px. Сейчас ниже 480px действует <code>xxs</code>.</p>
-			<div class="row">
+			<div id="equal-height-columns" class="row">
 				<div class="col-lg-2 col-sm-4 col-xs-6 col-xxs-12">
 					<h4>Колонка 1</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam at dignissimos ducimus earum fuga illo ipsam ipsum, laboriosam laborum, nam odit perferendis, temporibus totam ut. Aliquid cumque eius nihil.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque dolorem eligendi fuga id illo laudantium magni maiores maxime, nihil perferendis, quis quod sit tempora tempore, temporibus tenetur. At, inventore?</p>
 				</div>
 				<div class="col-lg-2 col-sm-4 col-xs-6 col-xxs-12">
 					<h4>Колонка 2</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam at dignissimos ducimus earum fuga illo ipsam ipsum, laboriosam laborum, nam odit perferendis, temporibus totam ut. Aliquid cumque eius nihil.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab, asperiores consequatur corporis eos.</p>
 				</div>
 				<div class="col-lg-2 col-sm-4 col-xs-6 col-xxs-12">
 					<h4>Колонка 3</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam at dignissimos ducimus earum fuga illo ipsam ipsum, laboriosam laborum, nam odit perferendis, temporibus totam ut. Aliquid cumque eius nihil.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam at dignissimos ducimus earum fuga illo ipsam ipsum.</p>
 				</div>
 				<div class="col-lg-2 col-sm-4 col-xs-6 col-xxs-12">
 					<h4>Колонка 4</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam at dignissimos ducimus earum fuga illo ipsam ipsum, laboriosam laborum, nam odit perferendis, temporibus totam ut. Aliquid cumque eius nihil.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur enim nulla numquam odio qui, quibusdam ut vero.</p>
 				</div>
 				<div class="col-lg-2 col-sm-4 col-xs-6 col-xxs-12">
 					<h4>Колонка 5</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam at dignissimos ducimus earum fuga illo ipsam ipsum, laboriosam laborum, nam odit perferendis, temporibus totam ut. Aliquid cumque eius nihil.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque dolor facilis iure libero mollitia odio quidem quod, similique soluta tempora temporibus ut vel voluptatibus. Ab expedita modi perferendis sed tempore.</p>
 				</div>
 				<div class="col-lg-2 col-sm-4 col-xs-6 col-xxs-12">
 					<h4>Колонка 6</h4>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aperiam at dignissimos ducimus earum fuga illo ipsam ipsum, laboriosam laborum, nam odit perferendis, temporibus totam ut. Aliquid cumque eius nihil.</p>
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus asperiores cumque dolore dolorem dolorum earum facere id impedit incidunt, laboriosam laborum magnam minima neque perferendis quae quia sit velit, voluptas.</p>
 				</div>
 			</div>
 		</div>
@@ -65,7 +65,14 @@
 	</div>
 	<div class="row">
 		<div class="col-xs-12">
-			<h3>Меню для мобильных</h3>
+			<h3>Колонки одинаковой высоты (Equal Height Blocks)</h3>
+			<p>jQuery плагин для установки одинаковой высоты дочерним элементам своего родителя. Параметры можно посмотреть в <code>modules/equal-height-blocks/equal-height-blocks.js</code>.</p>
+			<p>Плагин используется на этой странице для колонок Bootstrap выше, для проверки можно изменять размер окна, чтобы колонки перестраивались - их высота будет пересчитываться.</p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-xs-12">
+			<h3>Меню для мобильных (Hamburger Menu)</h3>
 			<p>Выпадающее <a class="hamburger-menu-icon" href="#">Меню</a></p>
 			<nav id="mobile-menu-top" class="text-center">
 				<a href="#">Пункт 1</a>
@@ -73,11 +80,14 @@
 				<a href="#">Пункт 3</a>
 				<a href="#">Пункт 4</a>
 			</nav>
+			<p>В планах реализовать меню типа <em>off-canvas</em>.</p>
 		</div>
 	</div>
 </div>
 <script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script type="text/javascript" src="modules/hamburger-menu/hamburger-menu.js"></script>
 <script type="text/javascript" src="modules/hamburger-menu/example.js"></script>
+<script type="text/javascript" src="modules/equal-height-blocks/equal-height-blocks.js"></script>
+<script type="text/javascript" src="modules/equal-height-blocks/example.js"></script>
 </body>
 </html>
