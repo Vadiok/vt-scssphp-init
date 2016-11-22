@@ -50,6 +50,8 @@
 
 Пример использования есть в ``scss/materialize.scss``.
 
+В переменной ``$roboto-font-path`` обязательно указать верный путь до шрифтов (см. пример в ``scss/materialize.scss``).
+
 
 #### [Bourbon Neat](http://neat.bourbon.io/examples/)
 

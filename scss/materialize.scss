@@ -1,5 +1,8 @@
 // Лучше подключать отдельно на время разработки, т.к. он долго компилируется
 
+// Обязательно указать верный путь
+$roboto-font-path: "/node_modules/materialize-css/dist/fonts/roboto/";
+
 $primary-color: #004d40;
 $secondary-color: #7e57c2;
 
