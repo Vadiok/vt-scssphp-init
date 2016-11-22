@@ -1,0 +1,65 @@
+$use_normalize: false !default;
+$use_icons: false !default;
+$use_grid: false !default;
+$use_navbar: false !default;
+$use_roboto: false !default;
+$use_cards: false !default;
+$use_toast: false !default;
+$use_tabs: false !default;
+$use_tooltip: false !default;
+$use_buttons: false !default;
+$use_dropdown: false !default;
+$use_waves: false !default;
+$use_modal: false !default;
+$use_collapsible: false !default;
+$use_chips: false !default;
+$use_materialbox: false !default;
+$use_forms: false !default;
+$use_table_of_contents: false !default;
+$use_sideNav: false !default;
+$use_preloader: false !default;
+$use_slider: false !default;
+$use_carousel: false !default;
+$use_date_picker: false !default;
+
+@import "paths";
+
+// Mixins
+@import $materializeDir + "mixins";
+@import $materializeDir + "color";
+
+// Variables;
+@import $materializeDir + "variables";
+
+// Reset
+@if $use_normalize {@import $materializeDir + "normalize";}
+
+// components
+@import $materializeDir + "global";
+@if $use_icons {@import $materializeDir + "icons-material-design";}
+@if $use_grid {@import $materializeDir + "grid";}
+@if $use_navbar {@import $materializeDir + "navbar";}
+@if $use_roboto {@import $materializeDir + "roboto";}
+@import $materializeDir + "typography";
+@if $use_cards {@import $materializeDir + "cards";}
+@if $use_toast {@import $materializeDir + "toast";}
+@if $use_tabs {@import $materializeDir + "tabs";}
+@if $use_tooltip {@import $materializeDir + "tooltip";}
+@if $use_buttons {@import $materializeDir + "buttons";}
+@if $use_dropdown {@import $materializeDir + "dropdown";}
+@if $use_waves {@import $materializeDir + "waves";}
+@if $use_modal {@import $materializeDir + "modal";}
+@if $use_collapsible {@import $materializeDir + "collapsible";}
+@if $use_chips {@import $materializeDir + "chips";}
+@if $use_materialbox {@import $materializeDir + "materialbox";}
+@if $use_forms {@import $materializeDir + "forms/forms";}
+@if $use_table_of_contents {@import $materializeDir + "table_of_contents";}
+@if $use_sideNav {@import $materializeDir + "sideNav";}
+@if $use_preloader {@import $materializeDir + "preloader";}
+@if $use_slider {@import $materializeDir + "slider";}
+@if $use_carousel {@import $materializeDir + "carousel";}
+@if $use_date_picker {
+	@import $materializeDir + "date_picker/default";
+	@import $materializeDir + "date_picker/default.date";
+	@import $materializeDir + "date_picker/default.time";
+}

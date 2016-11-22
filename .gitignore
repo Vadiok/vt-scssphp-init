@@ -13,3 +13,7 @@
 !/node_modules/bootstrap-sass/assets/
 !/node_modules/bourbon-neat/app/assets/**/*.*
 !/node_modules/jquery/dist/*.*
+!/node_modules/materialize-css/sass/components/*.scss
+!/node_modules/materialize-css/sass/materialize.scss
+!/node_modules/materialize-css/dist/fonts/**/*.*
+!/node_modules/materialize-css/dist/js/**/*.*

@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap-sass": "*",
     "bourbon-neat": "*",
-    "jquery": "*"
+    "jquery": "*",
+    "materialize-css": "^0.97.8"
   }
 }
