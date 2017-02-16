@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "354e1d209354e6ccb4507ee30486bdb7",
     "content-hash": "3b05e935ef467290ab80d64023c7d762",
     "packages": [
         {
@@ -58,7 +57,7 @@
                 "scss",
                 "stylesheet"
             ],
-            "time": "2016-09-11 01:34:11"
+            "time": "2016-09-11T01:34:11+00:00"
         }
     ],
     "packages-dev": [],

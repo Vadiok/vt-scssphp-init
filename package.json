@@ -3,6 +3,6 @@
     "bootstrap-sass": "*",
     "bourbon-neat": "*",
     "jquery": "*",
-    "materialize-css": "^0.97.8"
+    "materialize-css": "^0.98.0"
   }
 }
